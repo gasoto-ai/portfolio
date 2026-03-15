@@ -67,8 +67,8 @@ export default function AiWorkflow() {
 
         <div className="flex flex-wrap gap-6 pt-8 border-t border-white/20">
           {[
-            { value: "141", label: "Tests across all repos" },
-            { value: "4", label: "Repos shipped" },
+            { value: "500+", label: "Tests across all repos" },
+            { value: "9+", label: "Repos shipped" },
             { value: "Pi 5", label: "Runs on a Raspberry Pi" },
           ].map((s) => (
             <div key={s.label}>

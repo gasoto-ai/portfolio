@@ -153,6 +153,6 @@ describe("Footer", () => {
     const links = screen.getAllByRole("link")
     const hrefs = links.map((l) => l.getAttribute("href"))
     expect(hrefs).toContain("https://www.linkedin.com/in/georgeasoto/")
-    expect(hrefs).toContain("https://github.com/gasoto-ai")
+    expect(hrefs).toContain("https://github.com/gasoto-dev")
   })
 })
