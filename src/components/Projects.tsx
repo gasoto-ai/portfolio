@@ -20,6 +20,27 @@ const PROJECTS = [
     href: "https://github.com/gasoto-ai/the-crate",
     tags: ["Next.js 15", "TypeScript", "SQLite", "Tailwind", "32 tests"],
   },
+  {
+    name: "Checkout Demo",
+    description:
+      "Stripe-integrated e-commerce demo. Browse products, add to cart, and complete a checkout with real Stripe test mode. Modern UI with AI-generated product images, SQLite order persistence, and multi-step form flow.",
+    href: "https://github.com/gasoto-dev/checkout-demo",
+    tags: ["Next.js 15", "TypeScript", "Stripe", "Tailwind", "33 tests"],
+  },
+  {
+    name: "Webhook Inspector",
+    description:
+      "Live webhook debugger. Generates a unique endpoint URL, receives incoming webhook payloads in real time via SSE, and displays headers, body, and method — with replay and curl export.",
+    href: "https://github.com/gasoto-dev/webhook-inspector",
+    tags: ["Next.js 15", "TypeScript", "SSE", "SQLite", "24 tests"],
+  },
+  {
+    name: "Agent Monitor",
+    description:
+      "Multi-agent activity dashboard. Live SSE feed of agent events, task queue with status badges, per-agent status indicators, and a 14-day activity chart — built to monitor the Fish Tank AI crew.",
+    href: "https://github.com/gasoto-dev/agent-monitor",
+    tags: ["Next.js 15", "TypeScript", "SSE", "Recharts", "27 tests"],
+  },
 ]
 
 export default function Projects() {
@@ -65,7 +86,7 @@ export default function Projects() {
 
         <div className="mt-8 text-center">
           <a
-            href="https://github.com/gasoto-ai"
+            href="https://github.com/gasoto-dev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
