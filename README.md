@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# George Soto — Portfolio
 
-## Getting Started
+[![CI](https://github.com/gasoto-dev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/gasoto-dev/portfolio/actions/workflows/ci.yml)
 
-First, run the development server:
+George Soto's professional portfolio. Live at [codeyoursuccess.com](https://codeyoursuccess.com).
+
+## Stack
+
+- Next.js 15, TypeScript, Tailwind CSS
+- Static/SSG — no database, no auth
+- Deployed on Vercel
+
+## Sections
+
+- **Nav** — links to sections
+- **Hero** — name, title, CTA
+- **AI Workflow** — the multi-agent system (Ren + Forge + Vex); stats (500+ tests, 9+ repos)
+- **Projects** — 6 demo apps with descriptions, tags, and GitHub links
+- **Experience** — work history
+- **Skills** — tech stack
+- **Contact** — email link
+
+## Local setup
 
 ```bash
+git clone https://github.com/gasoto-ai/portfolio.git
+cd portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test
+```
 
-## Learn More
+25 smoke tests covering all sections, project cards, nav links, and footer.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment (Vercel)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is connected to Vercel and deploys automatically on every push to `main`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Project:** `gasoto-ai/portfolio` (gasoto-dev Vercel account)
+**Domain:** `codeyoursuccess.com` (registered at GoDaddy, nameservers pointed to Vercel)
 
-## Deploy on Vercel
+To redeploy manually:
+1. Push to `main`
+2. Vercel auto-deploys within 1–2 minutes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**No environment variables required** — the site is fully static.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Updating content
+
+- **Stats** (`src/components/AiWorkflow.tsx`) — update test count and repo count numbers
+- **Projects** (`src/components/Projects.tsx`) — add/remove project cards from `PROJECTS` array
+- **GitHub link** (`src/components/Footer.tsx` + `Projects.tsx`) — currently points to `github.com/gasoto-dev`
